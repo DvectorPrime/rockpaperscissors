@@ -122,6 +122,11 @@ button{
   box-shadow: 0px 7px #c76c1d inset, 0px -4px #2222227e;
 }
 
+.light-out{
+  box-shadow: 0 0 0 25px #eeeeee13, 0 0 0 55px #eeeeee0e, 0 0 0 90px #eeeeee07;
+  border-radius: 50%;
+}
+
 .inner-circle{
   height: 100px;
   width: 100px;
@@ -140,7 +145,7 @@ button{
 footer{
   display: block;
   position: absolute;
-  bottom: 40px;
+  bottom: 60px;
   width: 100%;
 }
 
@@ -206,6 +211,8 @@ footer{
 }
 
 .choice-dashboard{
+  margin-top: 100px;
+  margin-bottom: 50px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -232,6 +239,46 @@ footer{
   width: 120px;
   border-radius: 50%;
   background-color: #2222334b;
+}
+
+.result-div{
+  width: 300px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.result-div p{
+  font-size: 55px;
+  letter-spacing: 1.5px;
+  color: var(--white);
+  text-shadow: 3px 2px #2222227e;
+}
+
+.result-div button{
+  width: 200px;
+  padding: 11px 16px;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #183258;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 2px 2px #2222227e;
+  letter-spacing: 3px;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.result-large-screen{
+  display: none;
+}
+
+@media only screen and (max-height: 720px) {
+  .choice-dashboard{
+    margin-top: 70px;
+    margin-bottom: 30px;
+  }
+  footer{
+    bottom: 30px;
+  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -279,6 +326,27 @@ footer{
   .empty-choice{
     height: 220px;
     width: 220px;
+  }
+
+  .result-div{
+    width: 500px;
+  }
+  
+  .result-div p{
+    font-size: 100px;
+    text-shadow: 5px 2px #2222227e;
+  }
+  
+  .result-div button{
+    width: 340px;
+    padding: 20px 5px;
+    font-size: 24px;
+    color: #183258;
+  }
+
+  .light-out{
+    box-shadow: 0 0 0 50px #eeeeee13, 0 0 0 110px #eeeeee0e, 0 0 0 170px #eeeeee07;
+    border-radius: 50%;
   }
   
 }
@@ -433,5 +501,43 @@ footer{
 
   .phase-inner img{
     width: 85px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-height: 800px){
+  .choice-dashboard{
+    margin-top: 20px;
+    align-items: center;
+    padding: 0 150px;
+  }
+
+  .result-div{
+    width: 245px;
+    margin: 30px auto 0 auto;
+  }
+  
+  .result-div p{
+    font-size: 60px;
+  }
+  
+  .result-div button{
+    width: 220px;
+    padding: 15px 16px;
+    margin-top: 10px;
+    font-size: 20px;
+    color: #183258;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 2px 2px #2222227e;
+    letter-spacing: 3px;
+    font-family: "Barlow Condensed", sans-serif;
+  }
+
+  .result-large-screen{
+    display: block;
+  }
+
+  .result-small-screen{
+    display: none;
   }
 }

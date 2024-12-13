@@ -1,24 +1,18 @@
-import {React, useContext} from "react";
-import rock from "../images/icon-rock.svg"
-import paper from "../images/icon-paper.svg"
-import scissors from "../images/icon-scissors.svg"
-import { PhaseContext } from "../Context/PhaseContext";
-import { UserChoiceContext } from "../Context/UserChoiceContext";
+import {React} from "react";
+import rockavatar from "../images/icon-rock.svg"
+import paperavatar from "../images/icon-paper.svg"
+import scissorsavatar from "../images/icon-scissors.svg"
 
 function Button(props){
-    const avatar = props.avatar === "paper" ? paper : props.avatar === "rock" ? rock : scissors
+    const avatar = props.avatar === "paper" ? paperavatar : props.avatar === "rock" ? rockavatar : scissorsavatar
     const phase = props.phase ? props.phase : "";
-
-    const {setUserChoice} = useContext(UserChoiceContext)
-    const {setPhase} = useContext(PhaseContext)
-
-    function updateUserChoice(){
-        setUserChoice(props.avatar)
-        setPhase(2)
-    }
     
     return (
-        <button type="button" className={`outer-circle ${props.avatar} ${phase}-outer`} onClick={updateUserChoice}>
+        <button type="button" 
+                className={`outer-circle ${props.avatar} ${phase}-outer`} 
+                onClick={() => {props.handleClick && props.handleClick(props.avatar)}}
+                disabled={props.disabled}
+        >
             <div className={`inner-circle ${phase}-inner`}>
                  <img alt="" src={avatar} className="avatar" />
             </div>
