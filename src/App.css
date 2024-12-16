@@ -267,6 +267,10 @@ footer{
   font-family: "Barlow Condensed", sans-serif;
 }
 
+.result-div button:hover{
+  color: #9b1633
+}
+
 .result-large-screen{
   display: none;
 }

@@ -5,7 +5,6 @@ import { PhaseContextProvider } from "./Context/PhaseContext";
 import { UserChoiceContextProvider } from "./Context/UserChoiceContext";
 
 function App() {
-
   return(
     <PhaseContextProvider>
       <ScoreContextProvider>
