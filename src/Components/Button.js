@@ -8,15 +8,17 @@ function Button(props){
     const phase = props.phase ? props.phase : "";
     
     return (
+        <div className="workout">
         <button type="button" 
-                className={`outer-circle ${props.avatar} ${phase}-outer`} 
+                className={`outer-circle ${props.avatar} ${props.phase ? `${phase}-outer` : ""}`} 
                 onClick={() => {props.handleClick && props.handleClick(props.avatar)}}
                 disabled={props.disabled}
         >
+            <p className="button-text">{props.avatar}</p>
             <div className={`inner-circle ${phase}-inner`}>
                  <img alt="" src={avatar} className="avatar" />
             </div>
-        </button>
+        </button></div>
     )
 }
 

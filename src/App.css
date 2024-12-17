@@ -42,6 +42,10 @@ header img{
   height: auto;
 }
 
+.heading-text{
+  display: none;
+}
+
 header .score-container{
   background-color: var(--white);
   width: 80px;
@@ -87,6 +91,10 @@ button{
   cursor: pointer;
 }
 
+.button-text{
+  display: none;
+}
+
 .outer-circle{
   height: 140px;
   width: 140px;
@@ -96,6 +104,28 @@ button{
   border-radius: 50%;
   transform: rotate(180deg);
   border: none;
+}
+
+.outer-circle:hover{
+  height: 160px;
+  width: 160px;
+  transition: all 0.3s ease;
+
+  .inner-circle{
+    height: 115px;
+    width: 115px;
+    transition: all 0.3s ease;
+  } 
+}
+
+.phase-outer:hover{
+  height: 140px !important;
+  width: 140px !important;
+
+  .phase-inner{
+    height: 100px !important;
+    width: 100px !important;
+  }
 }
 
 .rock{
@@ -140,7 +170,7 @@ button{
   background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(255,255,255,1) 100%);
   box-shadow: 0px 5px #b7b8ca inset;
   transform: rotate(180deg);
-} 
+}
 
 footer{
   display: block;
@@ -307,6 +337,28 @@ footer{
     box-shadow: 0px 10px #b7b8ca inset;
   } 
 
+  .outer-circle:hover{
+    height: 300px;
+    width: 300px;
+    transition: all 0.3s ease;
+  
+    .inner-circle{
+      height: 230px;
+      width: 230px;
+      transition: all 0.3s ease;
+    } 
+  }
+  
+  .phase-outer:hover{
+    height: 280px !important;
+    width: 280px !important;
+  
+    .phase-inner{
+      height: 210px !important;
+      width: 210px !important;
+    }
+  }
+
   .avatar{
     width: 100px;
   }
@@ -392,7 +444,15 @@ footer{
     position: relative;
     margin-top: 0px;
     max-width: 600px;
-    gap: 40px;
+    gap: 0 30px;
+  }
+
+  .main .workout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 230px;
+    height: 230px;
   }
   
   .game-triangle{
@@ -413,6 +473,44 @@ footer{
   .inner-circle{
     height: 140px;
     width: 140px;
+  }
+  
+  .phase-outer{
+    width: 250px !important;
+    height: 250px !important
+  }
+
+  .phase-inner{
+    height: 190px !important;
+    width: 190px !important;
+  }
+
+  .phase-inner img{
+    width: 85px;
+  }
+
+  .outer-circle:focus, .outer-circle:hover{
+    outline: none;
+    height: 220px;
+    width: 220px;
+    transition: all 0.3s ease;
+    position: relative;
+
+    .inner-circle{
+      height: 170px;
+      width: 170px;
+      transition: all 0.3s ease;
+    } 
+  }
+  
+  .phase-outer:hover{
+    height: 250px !important;
+    width: 250px !important;
+  
+    .phase-inner{
+      height: 190px !important;
+      width: 190px !important;
+    }
   }
   
   .avatar{
@@ -491,20 +589,6 @@ footer{
     font-weight: bold;
     text-shadow: 1px 1px #000000;
     letter-spacing: 1.5px;
-  }
-
-  .phase-outer{
-    width: 250px;
-    height: 250px
-  }
-
-  .phase-inner{
-    height: 190px;
-    width: 190px;
-  }
-
-  .phase-inner img{
-    width: 85px;
   }
 }
 

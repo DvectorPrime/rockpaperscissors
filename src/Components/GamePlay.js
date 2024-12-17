@@ -19,6 +19,7 @@ function GamePlay( {setShowRules} ){
         <div className="game-container">
             <header className="header">
                 <div className="logo">
+                    <h1 className="heading-text">Rock Paper Scissors Game</h1>
                     <img src={logo} alt="" />
                 </div>
                 <div className="score-container">
