@@ -43,7 +43,7 @@ header img{
 }
 
 .heading-text{
-  display: none;
+  font-size: 0;
 }
 
 header .score-container{
@@ -91,10 +91,6 @@ button{
   cursor: pointer;
 }
 
-.button-text{
-  display: none;
-}
-
 .outer-circle{
   height: 140px;
   width: 140px;
@@ -104,6 +100,7 @@ button{
   border-radius: 50%;
   transform: rotate(180deg);
   border: none;
+  font-size: 0px;
 }
 
 .outer-circle:hover{
@@ -410,7 +407,7 @@ footer{
 @media only screen and (min-width: 992px){
   header{
     width: 55%;
-    margin: 40px auto 30px auto;
+    margin: 40px auto 10px auto;
     padding: 10px 20px;
     border-radius: 15px;
   }
@@ -597,6 +594,12 @@ footer{
     margin-top: 20px;
     align-items: center;
     padding: 0 150px;
+  }
+
+  .choices{
+    margin-top: 30px;
+    padding-top: 10px 0;
+    justify-content: space-between;
   }
 
   .result-div{

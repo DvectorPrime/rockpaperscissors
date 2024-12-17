@@ -9,16 +9,17 @@ function Button(props){
     
     return (
         <div className="workout">
-        <button type="button" 
+            <button type="button" 
                 className={`outer-circle ${props.avatar} ${props.phase ? `${phase}-outer` : ""}`} 
                 onClick={() => {props.handleClick && props.handleClick(props.avatar)}}
                 disabled={props.disabled}
-        >
-            <p className="button-text">{props.avatar}</p>
-            <div className={`inner-circle ${phase}-inner`}>
-                 <img alt="" src={avatar} className="avatar" />
-            </div>
-        </button></div>
+            >
+                {props.avatar}
+                <span className={`inner-circle ${phase}-inner`}>
+                    <img alt="" src={avatar} className="avatar" />
+                </span>
+            </button>
+        </div>
     )
 }
 
